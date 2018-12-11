@@ -1,0 +1,102 @@
+﻿THEORY BalanceX IS
+  Superviseur,26,6,0,17,2,0,0;
+  Initialisation,7,0,0,7,0,0,0;
+  WellDefinedness_Precondition_activate,2,0,0,2,0,0,0;
+  activate,3,0,0,2,0,0,0;
+  addObjetImmobile,7,3,0,3,1,0,0;
+  addObjetMobile,7,3,0,3,1,0,0
+END
+&
+THEORY ProofState IS
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Proved(0);
+  Proved(1);
+  Proved(0);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(0);
+  Proved(0);
+  Proved(1);
+  Proved(0);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0)
+END
+&
+THEORY MethodList IS
+  pr;
+  pr;
+  pr;
+  pr & pr & pr & pr & pr & pr;
+  pr;
+  pr;
+  pr;
+  pr & pr & pr & pr;
+  pr & pr & pr & pr & pr;
+  pr & pr & pr & pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr & pr & pr & pr;
+  pr & pr & pr & pr & pr;
+  pr & pr & pr & pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr
+END
+&
+THEORY PassList IS
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(2),(?;0;1);
+  Force(0),?;
+  Force(1),(?;0);
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?;
+  Force(1),(?;0);
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  PRVersion("svn")(CLT == "V4.0-53996")
+END

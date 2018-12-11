@@ -1,0 +1,96 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(18) & WellDefinedness_Precondition_activate.2,(_f(57) & _f(58) => _f(60));
+_f(1) & _f(2) & _f(18) & WellDefinedness_Precondition_activate.1,(_f(57) & _f(58) => _f(59));
+_f(1) & _f(2) & _f(18) & _f(32) & activate.3,(_f(20) & _f(4) => _f(35));
+_f(1) & _f(2) & _f(18) & _f(32) & activate.2,(_f(4) & _f(11) => _f(34));
+_f(1) & _f(2) & _f(18) & _f(32) & activate.1,(_f(4) & _f(9) => _f(33));
+_f(1) & _f(2) & _f(18) & _f(28) & addObjetMobile.7,(_f(20) & _f(4) => _f(31));
+_f(1) & _f(2) & _f(18) & _f(28) & addObjetMobile.6,(_f(4) & _f(15) => _f(30));
+_f(1) & _f(2) & _f(18) & _f(28) & addObjetMobile.5,(_f(4) & _f(13) => _f(29));
+_f(1) & _f(2) & _f(18) & _f(28) & addObjetMobile.4,(_f(4) & _f(11) => _f(24));
+_f(1) & _f(2) & _f(18) & _f(28) & addObjetMobile.3,(_f(4) & _f(9) => _f(23));
+_f(1) & _f(2) & _f(18) & _f(28) & addObjetMobile.2,(_f(4) & _f(7) => _f(22));
+_f(1) & _f(2) & _f(18) & _f(28) & addObjetMobile.1,(_f(4) & _f(5) => _f(21));
+_f(1) & _f(2) & _f(18) & _f(19) & addObjetImmobile.7,(_f(20) & _f(4) => _f(27));
+_f(1) & _f(2) & _f(18) & _f(19) & addObjetImmobile.6,(_f(4) & _f(15) => _f(26));
+_f(1) & _f(2) & _f(18) & _f(19) & addObjetImmobile.5,(_f(4) & _f(13) => _f(25));
+_f(1) & _f(2) & _f(18) & _f(19) & addObjetImmobile.4,(_f(4) & _f(11) => _f(24));
+_f(1) & _f(2) & _f(18) & _f(19) & addObjetImmobile.3,(_f(4) & _f(9) => _f(23));
+_f(1) & _f(2) & _f(18) & _f(19) & addObjetImmobile.2,(_f(4) & _f(7) => _f(22));
+_f(1) & _f(2) & _f(18) & _f(19) & addObjetImmobile.1,(_f(4) & _f(5) => _f(21));
+_f(1) & _f(2) & Initialisation.7,(_f(3) & _f(4) => _f(17));
+_f(1) & _f(2) & Initialisation.6,(_f(4) & _f(15) => _f(16));
+_f(1) & _f(2) & Initialisation.5,(_f(4) & _f(13) => _f(14));
+_f(1) & _f(2) & Initialisation.4,(_f(4) & _f(11) => _f(12));
+_f(1) & _f(2) & Initialisation.3,(_f(4) & _f(9) => _f(10));
+_f(1) & _f(2) & Initialisation.2,(_f(4) & _f(7) => _f(8));
+_f(1) & _f(2) & Initialisation.1,(_f(4) & _f(5) => _f(6))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+OBJETS: FIN(INTEGER) & not(OBJETS = {}) & ((1..3)*{ETATS}): FIN(NATURAL*{ETATS}) & not(((1..3)*{ETATS}) = {}) & ((1..2)*{TYPES}): FIN(NATURAL*{TYPES}) & not(((1..2)*{TYPES}) = {});
+((FALSE) = (TRUE));
+"Invariant is preserved";
+"Check invariant obj : POW( OBJETS)";
+{} : POW( OBJETS);
+"Check invariant ((incompatibilites) : (((obj) <-> (obj))))";
+(({}) : ((({}) <-> ({}))));
+"Check invariant ((etat) : (((obj) --> (ETATS))))";
+(({}) : ((({}) --> (((1..3)*{ETATS})))));
+"Check invariant ((((((etat)~ )[{actif}]) /\ ((incompatibilites )[((etat)~ )[{actif}]]))) = ({}))";
+(((((({})~ )[{(1|->ETATS)}]) /\ (({} )[(({})~ )[{(1|->ETATS)}]]))) = ({}));
+"Check invariant ((type) : (((obj) --> (TYPES))))";
+(({}) : ((({}) --> (((1..2)*{TYPES})))));
+"Check invariant ((pos) : (((((type)~ )[{mobile}]) >-> (((NAT) <-> (NAT))))))";
+(({}) : ((((({})~ )[{(1|->TYPES)}]) >-> (((NAT) <-> (NAT))))));
+(((((({})~ )[{(1|->TYPES)}]) /\ ((({})~ )[{(1|->ETATS)}]))) = ({}));
+obj : POW( OBJETS) & ((incompatibilites) : (((obj) <-> (obj)))) & etat : obj +-> ((1..3)*{ETATS}) & dom(etat) = obj & ((etat) : (((obj) --> (((1..3)*{ETATS}))))) & ((((((etat)~ )[{(1|->ETATS)}]) /\ ((incompatibilites )[((etat)~ )[{(1|->ETATS)}]]))) = ({})) & type : obj +-> ((1..2)*{TYPES}) & dom(type) = obj & ((type) : (((obj) --> (((1..2)*{TYPES}))))) & pos : ((type)~ )[{(1|->TYPES)}] +-> ((NAT) <-> (NAT)) & pos : ((type)~ )[{(1|->TYPES)}] --> ((NAT) <-> (NAT)) & pos~ : ((NAT) <-> (NAT)) +-> ((type)~ )[{(1|->TYPES)}] & ((pos) : (((((type)~ )[{(1|->TYPES)}]) >-> (((NAT) <-> (NAT)))))) & ((alarme) : (BOOL)) & ((((alarme) = (TRUE))) => (((((((type)~ )[{(1|->TYPES)}]) /\ (((etat)~ )[{(1|->ETATS)}]))) = ({}))));
+((oo) : (OBJETS)) & not(oo : obj);
+((alarme) = (TRUE));
+((obj) \/ ({oo})) : POW( OBJETS);
+((incompatibilites) : (((((obj) \/ ({oo}))) <-> (((obj) \/ ({oo}))))));
+((((etat) \/ ({((oo) |-> ((2|->ETATS)))}))) : (((((obj) \/ ({oo}))) --> (((1..3)*{ETATS})))));
+((((((((etat) \/ ({((oo) |-> ((2|->ETATS)))})))~ )[{(1|->ETATS)}]) /\ ((incompatibilites )[((((etat) \/ ({((oo) |-> ((2|->ETATS)))})))~ )[{(1|->ETATS)}]]))) = ({}));
+((((type) \/ ({((oo) |-> ((2|->TYPES)))}))) : (((((obj) \/ ({oo}))) --> (((1..2)*{TYPES})))));
+((pos) : (((((((type) \/ ({((oo) |-> ((2|->TYPES)))})))~ )[{(1|->TYPES)}]) >-> (((NAT) <-> (NAT))))));
+((((((((type) \/ ({((oo) |-> ((2|->TYPES)))})))~ )[{(1|->TYPES)}]) /\ (((((etat) \/ ({((oo) |-> ((2|->ETATS)))})))~ )[{(1|->ETATS)}]))) = ({}));
+((oo) : (OBJETS)) & not(oo : obj) & ((xx) : (NAT)) & ((yy) : (NAT));
+((((type) \/ ({((oo) |-> ((1|->TYPES)))}))) : (((((obj) \/ ({oo}))) --> (((1..2)*{TYPES})))));
+((((pos) \/ ({((oo) |-> ({((xx) |-> (yy))}))}))) : (((((((type) \/ ({((oo) |-> ((1|->TYPES)))})))~ )[{(1|->TYPES)}]) >-> (((NAT) <-> (NAT))))));
+((((((((type) \/ ({((oo) |-> ((1|->TYPES)))})))~ )[{(1|->TYPES)}]) /\ (((((etat) \/ ({((oo) |-> ((2|->ETATS)))})))~ )[{(1|->ETATS)}]))) = ({}));
+((oo) : (obj)) & not((etat )(oo) = (1|->ETATS)) & (((((incompatibilites )[{oo}]) /\ (((etat)~ )[{(1|->ETATS)}]))) = ({})) & ((alarme) = (FALSE));
+((((etat) <+ ({((oo) |-> ((1|->ETATS)))}))) : (((obj) --> (((1..3)*{ETATS})))));
+((((((((etat) <+ ({((oo) |-> ((1|->ETATS)))})))~ )[{(1|->ETATS)}]) /\ ((incompatibilites )[((((etat) <+ ({((oo) |-> ((1|->ETATS)))})))~ )[{(1|->ETATS)}]]))) = ({}));
+((((((type)~ )[{(1|->TYPES)}]) /\ (((((etat) <+ ({((oo) |-> ((1|->ETATS)))})))~ )[{(1|->ETATS)}]))) = ({}));
+OBJETS: FIN(INTEGER) & not(OBJETS = {});
+((rangeX) : (((0) .. (2147483647))));
+((alarme) : (BOOL));
+pos : ((type)~ )[{(1|->TYPES)}] +-> ((NAT) <-> (NAT));
+pos : ((type)~ )[{(1|->TYPES)}] --> ((NAT) <-> (NAT));
+pos~ : ((NAT) <-> (NAT)) +-> ((type)~ )[{(1|->TYPES)}];
+((pos) : (((((type)~ )[{(1|->TYPES)}]) >-> (((NAT) <-> (NAT))))));
+type : obj +-> ((1..2)*{TYPES});
+dom(type) = obj;
+((type) : (((obj) --> (((1..2)*{TYPES})))));
+((((((etat)~ )[{(1|->ETATS)}]) /\ ((incompatibilites )[((etat)~ )[{(1|->ETATS)}]]))) = ({}));
+etat : obj +-> ((1..3)*{ETATS});
+dom(etat) = obj;
+((etat) : (((obj) --> (((1..3)*{ETATS})))));
+((incompatibilites) : (((obj) <-> (obj))));
+obj : POW( OBJETS);
+((oo) : (OBJETS));
+((xx) : (NAT));
+not(oo : obj);
+(((((incompatibilites )[{oo}]) /\ (((etat)~ )[{(1|->ETATS)}]))) = ({}));
+not((etat )(oo) = (1|->ETATS));
+((oo) : (obj));
+"Well definedness";
+((oo) : (dom(etat)));
+((etat) : (((dom(etat)) +-> (ran(etat)))))
+END
+&
+THEORY EnumerateX IS
+ETATS == {actif,inactif,invalide};
+TYPES == {mobile,immobile}
+END

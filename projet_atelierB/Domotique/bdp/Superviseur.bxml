@@ -1,0 +1,597 @@
+<Machine name='Superviseur' type='abstraction'>
+<Sets>
+<Set>
+<Id value='OBJETS' typref='1297674402'/>
+</Set>
+<Set>
+<Id value='ETATS' typref='479950508'/>
+<Enumerated_Values>
+<Id value='actif' typref='1469311511'/>
+<Id value='inactif' typref='1469311511'/>
+<Id value='invalide' typref='1469311511'/>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value='TYPES' typref='4180697172'/>
+<Enumerated_Values>
+<Id value='mobile' typref='1714691695'/>
+<Id value='immobile' typref='1714691695'/>
+</Enumerated_Values>
+</Set>
+</Sets>
+<Abstract_Variables>
+<Id value='obj' typref='1297674402'/>
+<Id value='incompatibilites' typref='1567119824'/>
+<Id value='etat' typref='3962599290'/>
+<Id value='type' typref='1104090402'/>
+<Id value='pos' typref='3001801345'/>
+<Id value='alarme' typref='2043437594'/>
+</Abstract_Variables>
+<Invariant>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='&lt;:'>
+<Id value='obj' typref='1297674402'/>
+<Id value='OBJETS' typref='1297674402'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='incompatibilites' typref='1567119824'/>
+<Binary_Exp op='&lt;-&gt;' typref='3253503923'>
+<Id value='obj' typref='1297674402'/>
+<Id value='obj' typref='1297674402'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='etat' typref='3962599290'/>
+<Binary_Exp op='--&gt;' typref='1841424735'>
+<Id value='obj' typref='1297674402'/>
+<Id value='ETATS' typref='479950508'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Binary_Exp op='/\' typref='1297674402'>
+<Binary_Exp op='[' typref='1297674402'>
+<Unary_Exp op='~' typref='2237637076'>
+<Id value='etat' typref='3962599290'/>
+</Unary_Exp>
+<Nary_Exp op='{' typref='479950508'>
+<Id value='actif' typref='1469311511'/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op='[' typref='1297674402'>
+<Id value='incompatibilites' typref='1567119824'/>
+<Binary_Exp op='[' typref='1297674402'>
+<Unary_Exp op='~' typref='2237637076'>
+<Id value='etat' typref='3962599290'/>
+</Unary_Exp>
+<Nary_Exp op='{' typref='479950508'>
+<Id value='actif' typref='1469311511'/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet typref='3817003670'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='type' typref='1104090402'/>
+<Binary_Exp op='--&gt;' typref='3545804215'>
+<Id value='obj' typref='1297674402'/>
+<Id value='TYPES' typref='4180697172'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='pos' typref='3001801345'/>
+<Binary_Exp op='&gt;-&gt;' typref='1349312536'>
+<Binary_Exp op='[' typref='1297674402'>
+<Unary_Exp op='~' typref='2236069420'>
+<Id value='type' typref='1104090402'/>
+</Unary_Exp>
+<Nary_Exp op='{' typref='4180697172'>
+<Id value='mobile' typref='1714691695'/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op='&lt;-&gt;' typref='3083833907'>
+<Id value='NAT' typref='3603043417'/>
+<Id value='NAT' typref='3603043417'/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='alarme' typref='2043437594'/>
+<Id value='BOOL' typref='4282494527'/>
+</Exp_Comparison>
+<Binary_Pred op='=&gt;'>
+<Exp_Comparison op='='>
+<Id value='alarme' typref='2043437594'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Binary_Exp op='/\' typref='1297674402'>
+<Binary_Exp op='[' typref='1297674402'>
+<Unary_Exp op='~' typref='2236069420'>
+<Id value='type' typref='1104090402'/>
+</Unary_Exp>
+<Nary_Exp op='{' typref='4180697172'>
+<Id value='mobile' typref='1714691695'/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op='[' typref='1297674402'>
+<Unary_Exp op='~' typref='2237637076'>
+<Id value='etat' typref='3962599290'/>
+</Unary_Exp>
+<Nary_Exp op='{' typref='479950508'>
+<Id value='actif' typref='1469311511'/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet typref='3817003670'/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Variables>
+<Id value='obj' typref='1297674402'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='incompatibilites' typref='1567119824'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='etat' typref='3962599290'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='type' typref='1104090402'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='pos' typref='3001801345'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='alarme' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<Operations>
+<Operation name='addObjetImmobile'>
+<Input_Parameters>
+<Id value='oo' typref='3108108407'/>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='oo' typref='3108108407'/>
+<Id value='OBJETS' typref='1297674402'/>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Id value='oo' typref='3108108407'/>
+<Id value='obj' typref='1297674402'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Variables>
+<Id value='obj' typref='1297674402'/>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='1297674402'>
+<Id value='obj' typref='1297674402'/>
+<Nary_Exp op='{' typref='1297674402'>
+<Id value='oo' typref='3108108407'/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='etat' typref='3962599290'/>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='3962599290'>
+<Id value='etat' typref='3962599290'/>
+<Nary_Exp op='{' typref='3962599290'>
+<Binary_Exp op='|-&gt;' typref='2014785311'>
+<Id value='oo' typref='3108108407'/>
+<Id value='inactif' typref='1469311511'/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='type' typref='1104090402'/>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='1104090402'>
+<Id value='type' typref='1104090402'/>
+<Nary_Exp op='{' typref='1104090402'>
+<Binary_Exp op='|-&gt;' typref='2858725239'>
+<Id value='oo' typref='3108108407'/>
+<Id value='immobile' typref='1714691695'/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='addObjetMobile'>
+<Input_Parameters>
+<Id value='oo' typref='3108108407'/>
+<Id value='xx' typref='2701647786'/>
+<Id value='yy' typref='2701647786'/>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='oo' typref='3108108407'/>
+<Id value='OBJETS' typref='1297674402'/>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Id value='oo' typref='3108108407'/>
+<Id value='obj' typref='1297674402'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='xx' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='yy' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Variables>
+<Id value='obj' typref='1297674402'/>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='1297674402'>
+<Id value='obj' typref='1297674402'/>
+<Nary_Exp op='{' typref='1297674402'>
+<Id value='oo' typref='3108108407'/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='etat' typref='3962599290'/>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='3962599290'>
+<Id value='etat' typref='3962599290'/>
+<Nary_Exp op='{' typref='3962599290'>
+<Binary_Exp op='|-&gt;' typref='2014785311'>
+<Id value='oo' typref='3108108407'/>
+<Id value='inactif' typref='1469311511'/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='type' typref='1104090402'/>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='1104090402'>
+<Id value='type' typref='1104090402'/>
+<Nary_Exp op='{' typref='1104090402'>
+<Binary_Exp op='|-&gt;' typref='2858725239'>
+<Id value='oo' typref='3108108407'/>
+<Id value='mobile' typref='1714691695'/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='pos' typref='3001801345'/>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='3001801345'>
+<Id value='pos' typref='3001801345'/>
+<Nary_Exp op='{' typref='3001801345'>
+<Binary_Exp op='|-&gt;' typref='2202142808'>
+<Id value='oo' typref='3108108407'/>
+<Nary_Exp op='{' typref='103245008'>
+<Binary_Exp op='|-&gt;' typref='3672872563'>
+<Id value='xx' typref='2701647786'/>
+<Id value='yy' typref='2701647786'/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='activate'>
+<Input_Parameters>
+<Id value='oo' typref='3108108407'/>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='oo' typref='3108108407'/>
+<Id value='obj' typref='1297674402'/>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Binary_Exp op='(' typref='1469311511'>
+<Id value='etat' typref='3962599290'/>
+<Id value='oo' typref='3108108407'/>
+</Binary_Exp>
+<Id value='actif' typref='1469311511'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Binary_Exp op='/\' typref='1297674402'>
+<Binary_Exp op='[' typref='1297674402'>
+<Id value='incompatibilites' typref='1567119824'/>
+<Nary_Exp op='{' typref='1297674402'>
+<Id value='oo' typref='3108108407'/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op='[' typref='1297674402'>
+<Unary_Exp op='~' typref='2237637076'>
+<Id value='etat' typref='3962599290'/>
+</Unary_Exp>
+<Nary_Exp op='{' typref='479950508'>
+<Id value='actif' typref='1469311511'/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet typref='3817003670'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='alarme' typref='2043437594'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Binary_Exp op='(' typref='1469311511'>
+<Id value='etat' typref='3962599290'/>
+<Id value='oo' typref='3108108407'/>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='actif' typref='1469311511'/>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='1297674402'>
+<Unary_Exp op='POW'>
+<Id value='OBJETS'/>
+</Unary_Exp>
+</Type>
+<Type id='479950508'>
+<Unary_Exp op='POW'>
+<Id value='ETATS'/>
+</Unary_Exp>
+</Type>
+<Type id='1469311511'>
+<Id value='ETATS'/>
+</Type>
+<Type id='4180697172'>
+<Unary_Exp op='POW'>
+<Id value='TYPES'/>
+</Unary_Exp>
+</Type>
+<Type id='1714691695'>
+<Id value='TYPES'/>
+</Type>
+<Type id='1567119824'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='OBJETS'/>
+<Id value='OBJETS'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3962599290'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='OBJETS'/>
+<Id value='ETATS'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1104090402'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='OBJETS'/>
+<Id value='TYPES'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3001801345'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='OBJETS'/>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2043437594'>
+<Id value='BOOL'/>
+</Type>
+<Type id='3253503923'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='OBJETS'/>
+<Id value='OBJETS'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1841424735'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='OBJETS'/>
+<Id value='ETATS'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2237637076'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ETATS'/>
+<Id value='OBJETS'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3817003670'>
+<Unary_Exp op='POW'>
+<Generic_Type/>
+</Unary_Exp>
+</Type>
+<Type id='3545804215'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='OBJETS'/>
+<Id value='TYPES'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1349312536'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='OBJETS'/>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2236069420'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='TYPES'/>
+<Id value='OBJETS'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3083833907'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='4282494527'>
+<Unary_Exp op='POW'>
+<Id value='BOOL'/>
+</Unary_Exp>
+</Type>
+<Type id='3108108407'>
+<Id value='OBJETS'/>
+</Type>
+<Type id='2014785311'>
+<Binary_Exp op='*'>
+<Id value='OBJETS'/>
+<Id value='ETATS'/>
+</Binary_Exp>
+</Type>
+<Type id='2858725239'>
+<Binary_Exp op='*'>
+<Id value='OBJETS'/>
+<Id value='TYPES'/>
+</Binary_Exp>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='2202142808'>
+<Binary_Exp op='*'>
+<Id value='OBJETS'/>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Type>
+<Type id='103245008'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3672872563'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>

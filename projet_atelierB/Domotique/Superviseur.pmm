@@ -1,0 +1,7 @@
+﻿THEORY User_Pass IS
+Operation(addObjetImmobile) & ff(0) & pr & pr & pr & pr;
+Operation(addObjetMobile) & ff(0) & pr & pr & pr & pr;
+Operation(addObjetImmobile) & ff(0) & pr & pr & pr & pr & pr;
+Operation(addObjetMobile) & ff(0) & pr & pr & pr & pr & pr;
+Operation(activate) & ff(2) & pr & pr & pr & pr & pr & pr
+END 

@@ -1,0 +1,1776 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="inv">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="obj : POW( OBJETS)">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:1:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:1:2" typref="1297674402" value="OBJETS"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((incompatibilites) : (((obj) &lt;-&gt; (obj))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:1" typref="1567119824" value="incompatibilites"/>
+<Binary_Exp op="&lt;-&gt;" typref="3253503923">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:2:2" typref="1297674402" value="obj"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((etat) : (((obj) --&gt; (ETATS))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:1" typref="3962599290" value="etat"/>
+<Binary_Exp op="--&gt;" typref="1841424735">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:2:2" typref="479950508" value="ETATS"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((((etat)~ )[{actif}]) /\ ((incompatibilites )[((etat)~ )[{actif}]]))) = ({}))">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:1:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:1:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:1" typref="1567119824" value="incompatibilites"/>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:2" typref="3817003670"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((type) : (((obj) --&gt; (TYPES))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:1" typref="1104090402" value="type"/>
+<Binary_Exp op="--&gt;" typref="3545804215">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:2:2" typref="4180697172" value="TYPES"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((pos) : (((((type)~ )[{mobile}]) &gt;-&gt; (((NAT) &lt;-&gt; (NAT))))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:1" typref="3001801345" value="pos"/>
+<Binary_Exp op="&gt;-&gt;" typref="1349312536">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2236069420">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:1:1:1" typref="1104090402" value="type"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="4180697172">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:1:2:1" typref="1714691695" value="mobile"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="&lt;-&gt;" typref="3083833907">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:2:1" typref="3603043417" value="NAT"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:2:2" typref="3603043417" value="NAT"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((alarme) : (BOOL))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:7:1" typref="2043437594" value="alarme"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:7:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=&gt;" initialTag="((((alarme) = (TRUE))) =&gt; (((((((type)~ )[{mobile}]) /\ (((etat)~ )[{actif}]))) = ({}))))">
+<Exp_Comparison op="=">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:1:1" typref="2043437594" value="alarme"/>
+<Boolean_Literal tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2236069420">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:1:1:1" typref="1104090402" value="type"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="4180697172">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:1:2:1" typref="1714691695" value="mobile"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:2" typref="3817003670"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Define>
+<Define name="ass"/>
+<Define name="lprp">
+<Set>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:1:1:1" typref="1297674402" value="OBJETS"/>
+</Set>
+<Set>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:1:2:1" typref="479950508" value="ETATS"/>
+<Enumerated_Values>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:1:2:2:1" typref="1469311511" value="actif"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:1:2:2:2" typref="1469311511" value="inactif"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:1:2:2:3" typref="1469311511" value="invalide"/>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:1:3:1" typref="4180697172" value="TYPES"/>
+<Enumerated_Values>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:1:3:2:1" typref="1714691695" value="mobile"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:1:3:2:2" typref="1714691695" value="immobile"/>
+</Enumerated_Values>
+</Set>
+</Define>
+<Define name="inprp"/>
+<Define name="inext"/>
+<Define name="cst"/>
+<Proof_Obligation>
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:4:1:1:1:1" typref="1297674402" value="obj"/>
+</Variables>
+<Values>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:4:1:1:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:4:1:2:1:1" typref="1567119824" value="incompatibilites"/>
+</Variables>
+<Values>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:4:1:2:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:4:1:3:1:1" typref="3962599290" value="etat"/>
+</Variables>
+<Values>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:4:1:3:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:4:1:4:1:1" typref="1104090402" value="type"/>
+</Variables>
+<Values>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:4:1:4:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:4:1:5:1:1" typref="3001801345" value="pos"/>
+</Variables>
+<Values>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:4:1:5:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:4:1:6:1:1" typref="2043437594" value="alarme"/>
+</Variables>
+<Values>
+<Boolean_Literal tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:4:1:6:2:1" typref="2043437594" value="FALSE"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="obj : POW( OBJETS)">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:1:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:1:2" typref="1297674402" value="OBJETS"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((incompatibilites) : (((obj) &lt;-&gt; (obj))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:1" typref="1567119824" value="incompatibilites"/>
+<Binary_Exp op="&lt;-&gt;" typref="3253503923">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:2:2" typref="1297674402" value="obj"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((etat) : (((obj) --&gt; (ETATS))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:1" typref="3962599290" value="etat"/>
+<Binary_Exp op="--&gt;" typref="1841424735">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:2:2" typref="479950508" value="ETATS"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((((etat)~ )[{actif}]) /\ ((incompatibilites )[((etat)~ )[{actif}]]))) = ({}))">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:1:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:1:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:1" typref="1567119824" value="incompatibilites"/>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:2" typref="3817003670"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((type) : (((obj) --&gt; (TYPES))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:1" typref="1104090402" value="type"/>
+<Binary_Exp op="--&gt;" typref="3545804215">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:2:2" typref="4180697172" value="TYPES"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((pos) : (((((type)~ )[{mobile}]) &gt;-&gt; (((NAT) &lt;-&gt; (NAT))))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:1" typref="3001801345" value="pos"/>
+<Binary_Exp op="&gt;-&gt;" typref="1349312536">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2236069420">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:1:1:1" typref="1104090402" value="type"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="4180697172">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:1:2:1" typref="1714691695" value="mobile"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="&lt;-&gt;" typref="3083833907">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:2:1" typref="3603043417" value="NAT"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:2:2" typref="3603043417" value="NAT"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((alarme) : (BOOL))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:7:1" typref="2043437594" value="alarme"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:7:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=&gt;" initialTag="((((alarme) = (TRUE))) =&gt; (((((((type)~ )[{mobile}]) /\ (((etat)~ )[{actif}]))) = ({}))))">
+<Exp_Comparison op="=">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:1:1" typref="2043437594" value="alarme"/>
+<Boolean_Literal tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2236069420">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:1:1:1" typref="1104090402" value="type"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="4180697172">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:1:2:1" typref="1714691695" value="mobile"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:2" typref="3817003670"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>addObjetImmobile</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:2:1:1:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:2:1:1:2" typref="1297674402" value="OBJETS"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:2:1:2:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:2:1:2:2" typref="1297674402" value="obj"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:3:1:1:1:1" typref="1297674402" value="obj"/>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:3:1:1:2:1:1" typref="1297674402" value="obj"/>
+<Nary_Exp op="{" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:3:1:1:2:1:2:1" typref="3108108407" value="oo"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:3:1:2:1:1" typref="3962599290" value="etat"/>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="3962599290">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:3:1:2:2:1:1" typref="3962599290" value="etat"/>
+<Nary_Exp op="{" typref="3962599290">
+<Binary_Exp op="|-&gt;" typref="2014785311">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:3:1:2:2:1:2:1:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:3:1:2:2:1:2:1:2" typref="1469311511" value="inactif"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:3:1:3:1:1" typref="1104090402" value="type"/>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="1104090402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:3:1:3:2:1:1" typref="1104090402" value="type"/>
+<Nary_Exp op="{" typref="1104090402">
+<Binary_Exp op="|-&gt;" typref="2858725239">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:3:1:3:2:1:2:1:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:3:1:3:2:1:2:1:2" typref="1714691695" value="immobile"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="obj : POW( OBJETS)">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:1:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:1:2" typref="1297674402" value="OBJETS"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((incompatibilites) : (((obj) &lt;-&gt; (obj))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:1" typref="1567119824" value="incompatibilites"/>
+<Binary_Exp op="&lt;-&gt;" typref="3253503923">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:2:2" typref="1297674402" value="obj"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((etat) : (((obj) --&gt; (ETATS))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:1" typref="3962599290" value="etat"/>
+<Binary_Exp op="--&gt;" typref="1841424735">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:2:2" typref="479950508" value="ETATS"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((((etat)~ )[{actif}]) /\ ((incompatibilites )[((etat)~ )[{actif}]]))) = ({}))">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:1:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:1:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:1" typref="1567119824" value="incompatibilites"/>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:2" typref="3817003670"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((type) : (((obj) --&gt; (TYPES))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:1" typref="1104090402" value="type"/>
+<Binary_Exp op="--&gt;" typref="3545804215">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:2:2" typref="4180697172" value="TYPES"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((pos) : (((((type)~ )[{mobile}]) &gt;-&gt; (((NAT) &lt;-&gt; (NAT))))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:1" typref="3001801345" value="pos"/>
+<Binary_Exp op="&gt;-&gt;" typref="1349312536">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2236069420">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:1:1:1" typref="1104090402" value="type"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="4180697172">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:1:2:1" typref="1714691695" value="mobile"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="&lt;-&gt;" typref="3083833907">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:2:1" typref="3603043417" value="NAT"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:2:2" typref="3603043417" value="NAT"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((alarme) : (BOOL))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:7:1" typref="2043437594" value="alarme"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:7:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=&gt;" initialTag="((((alarme) = (TRUE))) =&gt; (((((((type)~ )[{mobile}]) /\ (((etat)~ )[{actif}]))) = ({}))))">
+<Exp_Comparison op="=">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:1:1" typref="2043437594" value="alarme"/>
+<Boolean_Literal tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2236069420">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:1:1:1" typref="1104090402" value="type"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="4180697172">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:1:2:1" typref="1714691695" value="mobile"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:2" typref="3817003670"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>addObjetMobile</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:1:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:1:2" typref="1297674402" value="OBJETS"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:2:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:2:2" typref="1297674402" value="obj"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:3:1" typref="2701647786" value="xx"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:3:2" typref="3603043417" value="NAT"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:4:1" typref="2701647786" value="yy"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:4:2" typref="3603043417" value="NAT"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:3:1:1:1:1" typref="1297674402" value="obj"/>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:3:1:1:2:1:1" typref="1297674402" value="obj"/>
+<Nary_Exp op="{" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:3:1:1:2:1:2:1" typref="3108108407" value="oo"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:3:1:2:1:1" typref="3962599290" value="etat"/>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="3962599290">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:3:1:2:2:1:1" typref="3962599290" value="etat"/>
+<Nary_Exp op="{" typref="3962599290">
+<Binary_Exp op="|-&gt;" typref="2014785311">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:3:1:2:2:1:2:1:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:3:1:2:2:1:2:1:2" typref="1469311511" value="inactif"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:3:1:3:1:1" typref="1104090402" value="type"/>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="1104090402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:3:1:3:2:1:1" typref="1104090402" value="type"/>
+<Nary_Exp op="{" typref="1104090402">
+<Binary_Exp op="|-&gt;" typref="2858725239">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:3:1:3:2:1:2:1:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:3:1:3:2:1:2:1:2" typref="1714691695" value="mobile"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:3:1:4:1:1" typref="3001801345" value="pos"/>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="3001801345">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:3:1:4:2:1:1" typref="3001801345" value="pos"/>
+<Nary_Exp op="{" typref="3001801345">
+<Binary_Exp op="|-&gt;" typref="2202142808">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:3:1:4:2:1:2:1:1" typref="3108108407" value="oo"/>
+<Nary_Exp op="{" typref="103245008">
+<Binary_Exp op="|-&gt;" typref="3672872563">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:3:1:4:2:1:2:1:2:1:1" typref="2701647786" value="xx"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:3:1:4:2:1:2:1:2:1:2" typref="2701647786" value="yy"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="obj : POW( OBJETS)">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:1:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:1:2" typref="1297674402" value="OBJETS"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((incompatibilites) : (((obj) &lt;-&gt; (obj))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:1" typref="1567119824" value="incompatibilites"/>
+<Binary_Exp op="&lt;-&gt;" typref="3253503923">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:2:2" typref="1297674402" value="obj"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((etat) : (((obj) --&gt; (ETATS))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:1" typref="3962599290" value="etat"/>
+<Binary_Exp op="--&gt;" typref="1841424735">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:2:2" typref="479950508" value="ETATS"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((((etat)~ )[{actif}]) /\ ((incompatibilites )[((etat)~ )[{actif}]]))) = ({}))">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:1:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:1:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:1" typref="1567119824" value="incompatibilites"/>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:2" typref="3817003670"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((type) : (((obj) --&gt; (TYPES))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:1" typref="1104090402" value="type"/>
+<Binary_Exp op="--&gt;" typref="3545804215">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:2:2" typref="4180697172" value="TYPES"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((pos) : (((((type)~ )[{mobile}]) &gt;-&gt; (((NAT) &lt;-&gt; (NAT))))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:1" typref="3001801345" value="pos"/>
+<Binary_Exp op="&gt;-&gt;" typref="1349312536">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2236069420">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:1:1:1" typref="1104090402" value="type"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="4180697172">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:1:2:1" typref="1714691695" value="mobile"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="&lt;-&gt;" typref="3083833907">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:2:1" typref="3603043417" value="NAT"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:2:2" typref="3603043417" value="NAT"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((alarme) : (BOOL))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:7:1" typref="2043437594" value="alarme"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:7:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=&gt;" initialTag="((((alarme) = (TRUE))) =&gt; (((((((type)~ )[{mobile}]) /\ (((etat)~ )[{actif}]))) = ({}))))">
+<Exp_Comparison op="=">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:1:1" typref="2043437594" value="alarme"/>
+<Boolean_Literal tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2236069420">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:1:1:1" typref="1104090402" value="type"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="4180697172">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:1:2:1" typref="1714691695" value="mobile"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:2" typref="3817003670"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>activate</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:1:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:1:2" typref="1297674402" value="obj"/>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Binary_Exp op="(" typref="1469311511">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:2:1:1" typref="3962599290" value="etat"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:2:1:2" typref="3108108407" value="oo"/>
+</Binary_Exp>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:2:2" typref="1469311511" value="actif"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:3:1:1:1" typref="1567119824" value="incompatibilites"/>
+<Nary_Exp op="{" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:3:1:1:2:1" typref="3108108407" value="oo"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:3:1:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:3:1:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:3:2" typref="3817003670"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:4:1" typref="2043437594" value="alarme"/>
+<Boolean_Literal tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:4:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:3:1:1:1:1" typref="3962599290" value="etat"/>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:3:1:1:1:1" typref="3962599290" value="etat"/>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:3:1:1:1:2" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:3:1:2:1" typref="1469311511" value="actif"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="obj : POW( OBJETS)">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:1:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:1:2" typref="1297674402" value="OBJETS"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((incompatibilites) : (((obj) &lt;-&gt; (obj))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:1" typref="1567119824" value="incompatibilites"/>
+<Binary_Exp op="&lt;-&gt;" typref="3253503923">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:2:2" typref="1297674402" value="obj"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((etat) : (((obj) --&gt; (ETATS))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:1" typref="3962599290" value="etat"/>
+<Binary_Exp op="--&gt;" typref="1841424735">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:2:2" typref="479950508" value="ETATS"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((((etat)~ )[{actif}]) /\ ((incompatibilites )[((etat)~ )[{actif}]]))) = ({}))">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:1:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:1:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:1" typref="1567119824" value="incompatibilites"/>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:2" typref="3817003670"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((type) : (((obj) --&gt; (TYPES))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:1" typref="1104090402" value="type"/>
+<Binary_Exp op="--&gt;" typref="3545804215">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:2:2" typref="4180697172" value="TYPES"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((pos) : (((((type)~ )[{mobile}]) &gt;-&gt; (((NAT) &lt;-&gt; (NAT))))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:1" typref="3001801345" value="pos"/>
+<Binary_Exp op="&gt;-&gt;" typref="1349312536">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2236069420">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:1:1:1" typref="1104090402" value="type"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="4180697172">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:1:2:1" typref="1714691695" value="mobile"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="&lt;-&gt;" typref="3083833907">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:2:1" typref="3603043417" value="NAT"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:2:2" typref="3603043417" value="NAT"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((alarme) : (BOOL))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:7:1" typref="2043437594" value="alarme"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:7:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=&gt;" initialTag="((((alarme) = (TRUE))) =&gt; (((((((type)~ )[{mobile}]) /\ (((etat)~ )[{actif}]))) = ({}))))">
+<Exp_Comparison op="=">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:1:1" typref="2043437594" value="alarme"/>
+<Boolean_Literal tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2236069420">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:1:1:1" typref="1104090402" value="type"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="4180697172">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:1:2:1" typref="1714691695" value="mobile"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:1:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:2:2" typref="3817003670"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessConstraints</Tag>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis>
+<Set>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:1:1:1" typref="1297674402" value="OBJETS"/>
+</Set>
+<Set>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:1:2:1" typref="479950508" value="ETATS"/>
+<Enumerated_Values>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:1:2:2:1" typref="1469311511" value="actif"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:1:2:2:2" typref="1469311511" value="inactif"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:1:2:2:3" typref="1469311511" value="invalide"/>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:1:3:1" typref="4180697172" value="TYPES"/>
+<Enumerated_Values>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:1:3:2:1" typref="1714691695" value="mobile"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:1:3:2:2" typref="1714691695" value="immobile"/>
+</Enumerated_Values>
+</Set>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="&lt;:" initialTag="obj : POW( OBJETS)">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:1:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:1:2" typref="1297674402" value="OBJETS"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":" initialTag="((incompatibilites) : (((obj) &lt;-&gt; (obj))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:1" typref="1567119824" value="incompatibilites"/>
+<Binary_Exp op="&lt;-&gt;" typref="3253503923">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:2:2:2" typref="1297674402" value="obj"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":" initialTag="((etat) : (((obj) --&gt; (ETATS))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:1" typref="3962599290" value="etat"/>
+<Binary_Exp op="--&gt;" typref="1841424735">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:2:2" typref="479950508" value="ETATS"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="=" initialTag="((((((etat)~ )[{actif}]) /\ ((incompatibilites )[((etat)~ )[{actif}]]))) = ({}))">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:1:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:1:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:1" typref="1567119824" value="incompatibilites"/>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:2" typref="3817003670"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":" initialTag="((type) : (((obj) --&gt; (TYPES))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:1" typref="1104090402" value="type"/>
+<Binary_Exp op="--&gt;" typref="3545804215">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:5:2:2" typref="4180697172" value="TYPES"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":" initialTag="((pos) : (((((type)~ )[{mobile}]) &gt;-&gt; (((NAT) &lt;-&gt; (NAT))))))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:1" typref="3001801345" value="pos"/>
+<Binary_Exp op="&gt;-&gt;" typref="1349312536">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2236069420">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:1:1:1" typref="1104090402" value="type"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="4180697172">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:1:2:1" typref="1714691695" value="mobile"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="&lt;-&gt;" typref="3083833907">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:2:1" typref="3603043417" value="NAT"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:6:2:2:2" typref="3603043417" value="NAT"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":" initialTag="((alarme) : (BOOL))">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:7:1" typref="2043437594" value="alarme"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:7:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="=">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:1:1" typref="2043437594" value="alarme"/>
+<Boolean_Literal tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:8:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessAssertions</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_addObjetImmobile</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:2:1:1:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:2:1:1:2" typref="1297674402" value="OBJETS"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_addObjetImmobile</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:2:1:1:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:2:1:1:2" typref="1297674402" value="OBJETS"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:2:1:2:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:1:2:1:2:2" typref="1297674402" value="obj"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_addObjetMobile</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:1:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:1:2" typref="1297674402" value="OBJETS"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="/:">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:2:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:2:2" typref="1297674402" value="obj"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:3:1" typref="2701647786" value="xx"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:3:2" typref="3603043417" value="NAT"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_addObjetMobile</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:1:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:1:2" typref="1297674402" value="OBJETS"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:2:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:2:2" typref="1297674402" value="obj"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:3:1" typref="2701647786" value="xx"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:3:2" typref="3603043417" value="NAT"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:4:1" typref="2701647786" value="yy"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:2:2:1:4:2" typref="3603043417" value="NAT"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_activate</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:1:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:1:2" typref="1297674402" value="obj"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:2:1:2" typref="3108108407" value="oo"/>
+<Unary_Exp op="dom">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:2:1:1" typref="3962599290" value="etat"/>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="/=">
+<Binary_Exp op="(" typref="1469311511">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:2:1:1" typref="3962599290" value="etat"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:2:1:2" typref="3108108407" value="oo"/>
+</Binary_Exp>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:2:2" typref="1469311511" value="actif"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="=">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:3:1:1:1" typref="1567119824" value="incompatibilites"/>
+<Nary_Exp op="{" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:3:1:1:2:1" typref="3108108407" value="oo"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:3:1:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:3:1:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:3:2" typref="3817003670"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_activate</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:1:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:1:2" typref="1297674402" value="obj"/>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Binary_Exp op="(" typref="1469311511">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:2:1:1" typref="3962599290" value="etat"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:2:1:2" typref="3108108407" value="oo"/>
+</Binary_Exp>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:2:2" typref="1469311511" value="actif"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:3:1:1:1" typref="1567119824" value="incompatibilites"/>
+<Nary_Exp op="{" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:3:1:1:2:1" typref="3108108407" value="oo"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:3:1:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:3:1:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:3:2" typref="3817003670"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:4:1" typref="2043437594" value="alarme"/>
+<Boolean_Literal tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:4:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="1297674402">
+<Unary_Exp op="POW">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:1:1:1" value="OBJETS"/>
+</Unary_Exp>
+</Type>
+<Type id="479950508">
+<Unary_Exp op="POW">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:2:1:1" value="ETATS"/>
+</Unary_Exp>
+</Type>
+<Type id="1469311511">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:3:1" value="ETATS"/>
+</Type>
+<Type id="4180697172">
+<Unary_Exp op="POW">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:4:1:1" value="TYPES"/>
+</Unary_Exp>
+</Type>
+<Type id="1714691695">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:5:1" value="TYPES"/>
+</Type>
+<Type id="1567119824">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:6:1:1:1" value="OBJETS"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:6:1:1:2" value="OBJETS"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3962599290">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:7:1:1:1" value="OBJETS"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:7:1:1:2" value="ETATS"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1104090402">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:8:1:1:1" value="OBJETS"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:8:1:1:2" value="TYPES"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3001801345">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:9:1:1:1" value="OBJETS"/>
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:9:1:1:2:1:1" value="INTEGER"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:9:1:1:2:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2043437594">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:10:1" value="BOOL"/>
+</Type>
+<Type id="3253503923">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:11:1:1:1:1" value="OBJETS"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:11:1:1:1:2" value="OBJETS"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1841424735">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:12:1:1:1:1" value="OBJETS"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:12:1:1:1:2" value="ETATS"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2237637076">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:13:1:1:1" value="ETATS"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:13:1:1:2" value="OBJETS"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:14:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3545804215">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:15:1:1:1:1" value="OBJETS"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:15:1:1:1:2" value="TYPES"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1349312536">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:16:1:1:1:1" value="OBJETS"/>
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:16:1:1:1:2:1:1" value="INTEGER"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:16:1:1:1:2:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2236069420">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:17:1:1:1" value="TYPES"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:17:1:1:2" value="OBJETS"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3083833907">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:18:1:1:1:1" value="INTEGER"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:18:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:19:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="4282494527">
+<Unary_Exp op="POW">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:20:1:1" value="BOOL"/>
+</Unary_Exp>
+</Type>
+<Type id="3108108407">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:21:1" value="OBJETS"/>
+</Type>
+<Type id="2014785311">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:22:1:1" value="OBJETS"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:22:1:2" value="ETATS"/>
+</Binary_Exp>
+</Type>
+<Type id="2858725239">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:23:1:1" value="OBJETS"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:23:1:2" value="TYPES"/>
+</Binary_Exp>
+</Type>
+<Type id="2701647786">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:24:1" value="INTEGER"/>
+</Type>
+<Type id="2202142808">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:25:1:1" value="OBJETS"/>
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:25:1:2:1:1" value="INTEGER"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:25:1:2:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Type>
+<Type id="103245008">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:26:1:1:1" value="INTEGER"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:26:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3672872563">
+<Binary_Exp op="*">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:27:1:1" value="INTEGER"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:6:27:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Type>
+</TypeInfos>
+</Proof_Obligations>
