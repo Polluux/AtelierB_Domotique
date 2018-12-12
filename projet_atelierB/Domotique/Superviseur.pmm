@@ -1,7 +1,9 @@
 ﻿THEORY User_Pass IS
+Operation(activate) & ff(0) & pr & pp(rp.1);
 Operation(addObjetImmobile) & ff(0) & pr & pr & pr & pr;
 Operation(addObjetMobile) & ff(0) & pr & pr & pr & pr;
 Operation(addObjetImmobile) & ff(0) & pr & pr & pr & pr & pr;
 Operation(addObjetMobile) & ff(0) & pr & pr & pr & pr & pr;
-Operation(activate) & ff(2) & pr & pr & pr & pr & pr & pr
+Operation(addObjetImmobile) & ff(0) & pr & pr & pr & pr & pr & pr & pr & pr & pr & pr;
+Operation(addObjetMobile) & ff(0) & pr & pr & pr & pr & pr & pr & pr & pr & pr & pr & pr & pr & pr & pp(rp.1) & pr & pr & pr & pr
 END 

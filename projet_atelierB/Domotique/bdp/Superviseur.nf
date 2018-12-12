@@ -57,7 +57,7 @@ THEORY ListInvariantX IS
   Expanded_List_Invariant(Machine(Superviseur))==(btrue);
   Abstract_List_Invariant(Machine(Superviseur))==(btrue);
   Context_List_Invariant(Machine(Superviseur))==(btrue);
-  List_Invariant(Machine(Superviseur))==(obj <: OBJETS & incompatibilites: obj <-> obj & etat: obj --> ETATS & etat~[{actif}]/\incompatibilites[etat~[{actif}]] = {} & type: obj --> TYPES & pos: type~[{mobile}] >-> (NAT <-> NAT) & alarme: BOOL & (alarme = TRUE => type~[{mobile}]/\etat~[{actif}] = {}))
+  List_Invariant(Machine(Superviseur))==(obj <: OBJETS & incompatibilites: obj <-> obj & etat: obj --> ETATS & etat~[{actif}]/\incompatibilites[etat~[{actif}]] = {} & !nn.(nn: obj => nn/:incompatibilites[{nn}]) & type: obj --> TYPES & pos: type~[{mobile}] >-> (NAT <-> NAT) & alarme: BOOL & (alarme = TRUE => type~[{mobile}]/\etat~[{actif}] = {}))
 END
 &
 THEORY ListAssertionsX IS
@@ -119,13 +119,13 @@ THEORY ListOperationGuardX END
 &
 THEORY ListPreconditionX IS
   List_Precondition(Machine(Superviseur),addObjetImmobile)==(oo: OBJETS & oo/:obj);
-  List_Precondition(Machine(Superviseur),addObjetMobile)==(oo: OBJETS & oo/:obj & xx: NAT & yy: NAT);
-  List_Precondition(Machine(Superviseur),activate)==(oo: obj & etat(oo)/=actif & incompatibilites[{oo}]/\etat~[{actif}] = {} & alarme = FALSE)
+  List_Precondition(Machine(Superviseur),addObjetMobile)==(oo: OBJETS & oo/:obj & xx: NAT & yy: NAT & pos~[{{xx|->yy}}] = {});
+  List_Precondition(Machine(Superviseur),activate)==(oo: obj & etat(oo)/=actif & incompatibilites[{oo}]/\etat~[{actif}] = {} & incompatibilites~[{oo}]/\etat~[{actif}] = {} & alarme = FALSE)
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Machine(Superviseur),activate)==(oo: obj & etat(oo)/=actif & incompatibilites[{oo}]/\etat~[{actif}] = {} & alarme = FALSE | etat:=etat<+{oo|->actif});
-  Expanded_List_Substitution(Machine(Superviseur),addObjetMobile)==(oo: OBJETS & oo/:obj & xx: NAT & yy: NAT | obj,etat,type,pos:=obj\/{oo},etat\/{oo|->inactif},type\/{oo|->mobile},pos\/{oo|->{xx|->yy}});
+  Expanded_List_Substitution(Machine(Superviseur),activate)==(oo: obj & etat(oo)/=actif & incompatibilites[{oo}]/\etat~[{actif}] = {} & incompatibilites~[{oo}]/\etat~[{actif}] = {} & alarme = FALSE | etat:=etat<+{oo|->actif});
+  Expanded_List_Substitution(Machine(Superviseur),addObjetMobile)==(oo: OBJETS & oo/:obj & xx: NAT & yy: NAT & pos~[{{xx|->yy}}] = {} | obj,etat,type,pos:=obj\/{oo},etat\/{oo|->inactif},type\/{oo|->mobile},pos\/{oo|->{xx|->yy}});
   Expanded_List_Substitution(Machine(Superviseur),addObjetImmobile)==(oo: OBJETS & oo/:obj | obj,etat,type:=obj\/{oo},etat\/{oo|->inactif},type\/{oo|->immobile});
   List_Substitution(Machine(Superviseur),addObjetImmobile)==(obj:=obj\/{oo} || etat:=etat\/{oo|->inactif} || type:=type\/{oo|->immobile});
   List_Substitution(Machine(Superviseur),addObjetMobile)==(obj:=obj\/{oo} || etat:=etat\/{oo|->inactif} || type:=type\/{oo|->mobile} || pos:=pos\/{oo|->{xx|->yy}});

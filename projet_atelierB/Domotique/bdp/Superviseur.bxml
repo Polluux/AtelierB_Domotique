@@ -71,6 +71,28 @@
 </Binary_Exp>
 <EmptySet typref='3817003670'/>
 </Exp_Comparison>
+<Quantified_Pred type='!'>
+<Variables>
+<Id value='nn' typref='3108108407'/>
+</Variables>
+<Body>
+<Binary_Pred op='=&gt;'>
+<Exp_Comparison op=':'>
+<Id value='nn' typref='3108108407'/>
+<Id value='obj' typref='1297674402'/>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Id value='nn' typref='3108108407'/>
+<Binary_Exp op='[' typref='1297674402'>
+<Id value='incompatibilites' typref='1567119824'/>
+<Nary_Exp op='{' typref='1297674402'>
+<Id value='nn' typref='3108108407'/>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
 <Exp_Comparison op=':'>
 <Id value='type' typref='1104090402'/>
 <Binary_Exp op='--&gt;' typref='3545804215'>
@@ -271,6 +293,22 @@
 <Id value='yy' typref='2701647786'/>
 <Id value='NAT' typref='3603043417'/>
 </Exp_Comparison>
+<Exp_Comparison op='='>
+<Binary_Exp op='[' typref='1297674402'>
+<Unary_Exp op='~' typref='2754933389'>
+<Id value='pos' typref='3001801345'/>
+</Unary_Exp>
+<Nary_Exp op='{' typref='3083833907'>
+<Nary_Exp op='{' typref='103245008'>
+<Binary_Exp op='|-&gt;' typref='3672872563'>
+<Id value='xx' typref='2701647786'/>
+<Id value='yy' typref='2701647786'/>
+</Binary_Exp>
+</Nary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+<EmptySet typref='3817003670'/>
+</Exp_Comparison>
 </Nary_Pred>
 </Precondition>
 <Body>
@@ -365,6 +403,27 @@
 <Binary_Exp op='/\' typref='1297674402'>
 <Binary_Exp op='[' typref='1297674402'>
 <Id value='incompatibilites' typref='1567119824'/>
+<Nary_Exp op='{' typref='1297674402'>
+<Id value='oo' typref='3108108407'/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op='[' typref='1297674402'>
+<Unary_Exp op='~' typref='2237637076'>
+<Id value='etat' typref='3962599290'/>
+</Unary_Exp>
+<Nary_Exp op='{' typref='479950508'>
+<Id value='actif' typref='1469311511'/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet typref='3817003670'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Binary_Exp op='/\' typref='1297674402'>
+<Binary_Exp op='[' typref='1297674402'>
+<Unary_Exp op='~' typref='1567119824'>
+<Id value='incompatibilites' typref='1567119824'/>
+</Unary_Exp>
 <Nary_Exp op='{' typref='1297674402'>
 <Id value='oo' typref='3108108407'/>
 </Nary_Exp>
@@ -496,6 +555,9 @@
 <Generic_Type/>
 </Unary_Exp>
 </Type>
+<Type id='3108108407'>
+<Id value='OBJETS'/>
+</Type>
 <Type id='3545804215'>
 <Unary_Exp op='POW'>
 <Unary_Exp op='POW'>
@@ -549,9 +611,6 @@
 <Id value='BOOL'/>
 </Unary_Exp>
 </Type>
-<Type id='3108108407'>
-<Id value='OBJETS'/>
-</Type>
 <Type id='2014785311'>
 <Binary_Exp op='*'>
 <Id value='OBJETS'/>
@@ -567,16 +626,18 @@
 <Type id='2701647786'>
 <Id value='INTEGER'/>
 </Type>
-<Type id='2202142808'>
+<Type id='2754933389'>
+<Unary_Exp op='POW'>
 <Binary_Exp op='*'>
-<Id value='OBJETS'/>
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
 <Id value='INTEGER'/>
 <Id value='INTEGER'/>
 </Binary_Exp>
 </Unary_Exp>
+<Id value='OBJETS'/>
 </Binary_Exp>
+</Unary_Exp>
 </Type>
 <Type id='103245008'>
 <Unary_Exp op='POW'>
@@ -590,6 +651,17 @@
 <Binary_Exp op='*'>
 <Id value='INTEGER'/>
 <Id value='INTEGER'/>
+</Binary_Exp>
+</Type>
+<Type id='2202142808'>
+<Binary_Exp op='*'>
+<Id value='OBJETS'/>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
 </Binary_Exp>
 </Type>
 </TypeInfos>

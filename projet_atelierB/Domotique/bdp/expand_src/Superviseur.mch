@@ -15,8 +15,6 @@ ABSTRACT_VARIABLES
     , incompatibilites //La relation qui associe un objet avec lesquels il n'est pas compatible
     , etat //La fonction qui à un objet associe son état
     , type //La fonction qui à un objet associe son type
-    /*,objx //La fonction qui à un objet associe une valeur de position x
-    ,objy //La fonction qui à un objet associe une valeur de position y*/
     , pos //La fonction qui à un objet associe un couple de valeurs de position x et y
     , alarme //La variable boolean qui définie si l'alarme est enclenchée ou non
 
@@ -27,6 +25,7 @@ INVARIANT
     //Intersection entre les objets actifs et leurs incompatibilités est vide
     //Il ne peux pas y avoir à la fois un objet actif et un autre objet actif qui soit incompatible avec le 1er
     & ( etat ~ [ { actif } ] /\ incompatibilites [ etat ~ [ { actif } ] ] = {} )
+    & ! nn . ( nn : obj => nn /: incompatibilites [ { nn } ] )
     & type : obj --> TYPES
     //Les objets de type mobile uniquement ont une valeur en x et en y
     /*& objx : type~[{mobile}] --> NAT
@@ -35,6 +34,7 @@ INVARIANT
     //Il n'y a pas deux objets mobiles aux mêmes coordonnées
     //& (INTER(xx).(xx : {NAT |-> NAT} | !(yy).(yy : type~[{mobile}] ^ xx := {objx(yy) |-> objy(yy)} )) = {})
     //& (INTER(xx).(xx:type~[{mobile}] | {objx(xx) |-> objy(xx)}) = {})
+    //Injection totale, tout les objets mobiles ont   couple de valeurs (x,y) et chaque couple ne peut avoir qu'un antécédent
     & pos : type ~ [ { mobile } ] >-> ( NAT <-> NAT )
     & alarme : BOOL
     //Si l'alarme est vrai, alors, l'intersection des objets mobiles et actifs est vide
@@ -46,8 +46,6 @@ INITIALISATION
     || incompatibilites := {}
     || etat := {}
     || type := {}
-    /*|| objx:={}
-    || objy:={}*/
     || pos := {}
     || alarme := FALSE
 
@@ -68,6 +66,7 @@ OPERATIONS
         & oo /: obj
         & xx : NAT
         & yy : NAT
+        & pos ~ [ { { xx |-> yy } } ] = {}
     THEN
         obj := obj \/ { oo }
         || etat := etat \/ { oo |-> inactif }
@@ -80,6 +79,7 @@ OPERATIONS
         oo : obj
         & etat ( oo ) /= actif
         & ( incompatibilites [ { oo } ] /\ etat ~ [ { actif } ] = {} )
+        & ( incompatibilites ~ [ { oo } ] /\ etat ~ [ { actif } ] = {} )
         & alarme = FALSE
     THEN
         etat ( oo ) := actif
