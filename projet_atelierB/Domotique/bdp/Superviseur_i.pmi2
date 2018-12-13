@@ -1,0 +1,29 @@
+﻿THEORY BalanceX IS
+  Superviseur_i,3,0,0,1,0,0,0;
+  ValuesLemmas,3,0,0,1,0,0,0
+END
+&
+THEORY ProofState IS
+  Unproved;
+  Unproved;
+  Proved(0)
+END
+&
+THEORY MethodList IS
+  ?;
+  pr;
+  pr
+END
+&
+THEORY PassList IS
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  PRVersion("svn")(CLT == "V4.0-53996")
+END

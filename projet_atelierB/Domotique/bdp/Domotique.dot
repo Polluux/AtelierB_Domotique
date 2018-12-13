@@ -1,4 +1,4 @@
 digraph {
-Superviseur [ label=" Superviseur " shape= box ]
+Superviseur_i [ label=" Superviseur\nSuperviseur_r\nSuperviseur_i " shape= box ]
 
 }

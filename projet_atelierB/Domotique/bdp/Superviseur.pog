@@ -192,7 +192,7 @@
 <Local_Hyp num="3">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -204,7 +204,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -219,7 +219,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -234,7 +234,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -266,7 +266,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -285,9 +285,8 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="4">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -302,7 +301,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="5">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -327,7 +326,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="6">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -405,7 +404,7 @@
 <Local_Hyp num="3">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -422,7 +421,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -447,7 +446,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -475,7 +474,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -523,7 +522,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -542,9 +541,8 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="4">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -572,7 +570,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="5">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -605,7 +603,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="6">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -654,7 +652,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>addObjetMobile</Tag>
 <Tag>INVARIANT</Tag>
@@ -723,7 +721,7 @@
 <Local_Hyp num="3">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -740,7 +738,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -765,7 +763,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -793,7 +791,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -841,7 +839,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="4">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -860,9 +858,8 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="5">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -890,7 +887,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="6">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -936,7 +933,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="7">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1066,7 +1063,7 @@
 <Local_Hyp num="2">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1089,7 +1086,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1137,7 +1134,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1177,6 +1174,414 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>deactivate</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:1:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:1:2" typref="1297674402" value="obj"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Binary_Exp op="(" typref="1469311511">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:2:1:1" typref="3962599290" value="etat"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:2:1:2" typref="3108108407" value="oo"/>
+</Binary_Exp>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:2:2" typref="1469311511" value="actif"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Exp_Comparison op="=">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:9:1:1" typref="2043437594" value="alarme"/>
+<Boolean_Literal tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:9:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="2"/>
+<Exp_Comparison op=":" initialTag="((etat) : (((obj) --> (ETATS))))" goalTag="Invariant is preserved">
+<Binary_Exp op="&lt;+" tag=",/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:1,/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:3:1:1:1:1" typref="3962599290">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:3:1:1:1:1" typref="3962599290" value="etat"/>
+<Nary_Exp op="{">
+<Binary_Exp op="|->">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:3:1:1:1:2" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:3:1:2:1" typref="1469311511" value="inactif"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="-->" typref="1841424735">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:2:2" typref="479950508" value="ETATS"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="2"/>
+<Exp_Comparison op="=" initialTag="((((((etat)~ )[{actif}]) /\ ((incompatibilites )[((etat)~ )[{actif}]]))) = ({}))" goalTag="Invariant is preserved">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Binary_Exp op="&lt;+" tag=",/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:1:1:1,/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:3:1:1:1:1" typref="3962599290">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:3:1:1:1:1" typref="3962599290" value="etat"/>
+<Nary_Exp op="{">
+<Binary_Exp op="|->">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:3:1:1:1:2" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:3:1:2:1" typref="1469311511" value="inactif"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:1:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:1" typref="1567119824" value="incompatibilites"/>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Binary_Exp op="&lt;+" tag=",/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:2:1:1,/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:3:1:1:1:1" typref="3962599290">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:3:1:1:1:1" typref="3962599290" value="etat"/>
+<Nary_Exp op="{">
+<Binary_Exp op="|->">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:3:1:1:1:2" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:3:1:2:1" typref="1469311511" value="inactif"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:2" typref="3817003670"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="2"/>
+<Ref_Hyp num="1"/>
+</Nary_Pred>
+<Exp_Comparison op="=">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2236069420">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:9:2:1:1:1:1" typref="1104090402" value="type"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="4180697172">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:9:2:1:1:2:1" typref="1714691695" value="mobile"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Binary_Exp op="&lt;+" tag=",/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:9:2:1:2:1:1,/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:3:1:1:1:1" typref="3962599290">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:3:1:1:1:1" typref="3962599290" value="etat"/>
+<Nary_Exp op="{">
+<Binary_Exp op="|->">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:3:1:1:1:2" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:3:1:2:1" typref="1469311511" value="inactif"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:9:2:1:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:9:2:2" typref="3817003670"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>activateAlarm</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op="=">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:1:1:1" typref="2043437594" value="alarme"/>
+<Boolean_Literal tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:1:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+</Hypothesis>
+<Local_Hyp num="1">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:2:2:1,/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:9:1:1,/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:2:1:1" typref="2043437594" value="TRUE"/>
+<Boolean_Literal tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:9:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal merge="">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="2"/>
+<Exp_Comparison op=":" initialTag="((etat) : (((obj) --> (ETATS))))" goalTag="Invariant is preserved">
+<Binary_Exp op="\/" tag=",/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:1,/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:1:1" typref="3962599290">
+<Binary_Exp op="|>" typref="3962599290">
+<Binary_Exp op="\/" typref="3962599290">
+<Binary_Exp op="|>" typref="3962599290">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:1:1:1:1" typref="3962599290" value="etat" fixed="false"/>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:1:1:1:2:1" typref="1469311511" value="invalide"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:1:1:2" typref="3962599290" value="etat" fixed="false"/>
+</Binary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:1:2:1" typref="1469311511" value="inactif"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="*" typref="3962599290">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:2:1:1:1" typref="3962599290" value="etat" fixed="false"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:2:1:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:2:2:1" typref="1469311511" value="inactif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<Binary_Exp op="-->" typref="1841424735">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:2:1" typref="1297674402" value="obj"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:3:2:2" typref="479950508" value="ETATS"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal merge="">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="2"/>
+<Exp_Comparison op="=" initialTag="((((((etat)~ )[{actif}]) /\ ((incompatibilites )[((etat)~ )[{actif}]]))) = ({}))" goalTag="Invariant is preserved">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Binary_Exp op="\/" tag=",/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:1:1:1,/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:1:1" typref="3962599290">
+<Binary_Exp op="|>" typref="3962599290">
+<Binary_Exp op="\/" typref="3962599290">
+<Binary_Exp op="|>" typref="3962599290">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:1:1:1:1" typref="3962599290" value="etat" fixed="false"/>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:1:1:1:2:1" typref="1469311511" value="invalide"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:1:1:2" typref="3962599290" value="etat" fixed="false"/>
+</Binary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:1:2:1" typref="1469311511" value="inactif"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="*" typref="3962599290">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:2:1:1:1" typref="3962599290" value="etat" fixed="false"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:2:1:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:2:2:1" typref="1469311511" value="inactif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:1:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:1" typref="1567119824" value="incompatibilites"/>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Binary_Exp op="\/" tag=",/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:2:1:1,/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:1:1" typref="3962599290">
+<Binary_Exp op="|>" typref="3962599290">
+<Binary_Exp op="\/" typref="3962599290">
+<Binary_Exp op="|>" typref="3962599290">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:1:1:1:1" typref="3962599290" value="etat" fixed="false"/>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:1:1:1:2:1" typref="1469311511" value="invalide"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:1:1:2" typref="3962599290" value="etat" fixed="false"/>
+</Binary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:1:2:1" typref="1469311511" value="inactif"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="*" typref="3962599290">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:2:1:1:1" typref="3962599290" value="etat" fixed="false"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:2:1:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:2:2:1" typref="1469311511" value="inactif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:1:2:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:4:2" typref="3817003670"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal merge="">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="2"/>
+<Ref_Hyp num="1"/>
+</Nary_Pred>
+<Exp_Comparison op="=">
+<Binary_Exp op="/\" typref="1297674402">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2236069420">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:9:2:1:1:1:1" typref="1104090402" value="type"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="4180697172">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:9:2:1:1:2:1" typref="1714691695" value="mobile"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Binary_Exp op="\/" tag=",/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:9:2:1:2:1:1,/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:1:1" typref="3962599290">
+<Binary_Exp op="|>" typref="3962599290">
+<Binary_Exp op="\/" typref="3962599290">
+<Binary_Exp op="|>" typref="3962599290">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:1:1:1:1" typref="3962599290" value="etat" fixed="false"/>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:1:1:1:2:1" typref="1469311511" value="invalide"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:1:1:2" typref="3962599290" value="etat" fixed="false"/>
+</Binary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:1:2:1" typref="1469311511" value="inactif"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="*" typref="3962599290">
+<Binary_Exp op="[" typref="1297674402">
+<Unary_Exp op="~" typref="2237637076">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:2:1:1:1" typref="3962599290" value="etat" fixed="false"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:2:1:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:2:1:1:2:1:2:2:1" typref="1469311511" value="inactif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+<Nary_Exp op="{" typref="479950508">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:9:2:1:2:2:1" typref="1469311511" value="actif"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<EmptySet tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:3:1:9:2:2" typref="3817003670"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>getActifObjects</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>getInvalideObjects</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
 </Proof_Obligation>
 <Proof_Obligation merge="=">
 <Tag>WellDefinednessConstraints</Tag>
@@ -1442,7 +1847,7 @@
 </Exp_Comparison>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_addObjetMobile</Tag>
 <Tag>INVARIANT</Tag>
@@ -1564,7 +1969,7 @@
 <Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:3:2:1:1:2" typref="1297674402" value="obj"/>
 </Exp_Comparison>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1578,7 +1983,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1670,6 +2075,180 @@
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_deactivate</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Local_Hyp num="1">
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:1:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:1:2" typref="1297674402" value="obj"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Simple_Goal>
+<Tag>Well definedness</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:2:1:2" typref="3108108407" value="oo"/>
+<Unary_Exp op="dom">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Well definedness</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:2:1:1" typref="3962599290" value="etat"/>
+<Binary_Exp op="+->">
+<Unary_Exp op="dom">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:2:1:1" typref="3962599290" value="etat"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_deactivate</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:1:1" typref="3108108407" value="oo"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:1:2" typref="1297674402" value="obj"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Binary_Exp op="(" typref="1469311511">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:2:1:1" typref="3962599290" value="etat"/>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:2:1:2" typref="3108108407" value="oo"/>
+</Binary_Exp>
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:4:2:1:2:2" typref="1469311511" value="actif"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_activateAlarm</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_activateAlarm</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op="=">
+<Id tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:1:1:1" typref="2043437594" value="alarme"/>
+<Boolean_Literal tag="/home/polluux/Documents/Boulot/M2/Attiogbe/projet_pointeur/Domotique/bdp/Superviseur.bxml:1:5:5:1:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_getActifObjects</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_getActifObjects</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_getInvalideObjects</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_getInvalideObjects</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
 </Proof_Obligation>
 <TypeInfos merge="=">
 <Type id="1297674402">

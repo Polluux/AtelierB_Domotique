@@ -1,0 +1,104 @@
+﻿/* Superviseur_i
+ * Author: 
+ * Creation date: 13/12/18
+ */
+
+IMPLEMENTATION Superviseur_i
+REFINES Superviseur_r
+
+DEFINITIONS
+    PLAGE_OBJETS == 0 .. 256
+
+SETS
+    OKKO = { ok , ko }
+
+VALUES
+    OBJETS = PLAGE_OBJETS
+
+CONCRETE_VARIABLES
+    c_obj
+    , c_incompatibilites
+    , c_etat
+    , c_type
+    , c_pos
+    , c_alarme
+
+INVARIANT
+    c_obj : PLAGE_OBJETS --> OKKO
+    & obj = c_obj ~ [ { ok } ]
+    & c_incompatibilites : PLAGE_OBJETS <-> PLAGE_OBJETS
+    & incompatibilites = ( obj <| c_incompatibilites )
+    & c_etat : PLAGE_OBJETS --> ETATS
+    & etat = ( obj <| c_etat )
+    & c_type : PLAGE_OBJETS --> TYPES
+    & type = ( obj <| c_type )
+    & c_pos : PLAGE_OBJETS >-> ( NAT <-> NAT )
+    & pos = ( obj <| c_pos )
+    & c_alarme : BOOL
+    & alarme = c_alarme
+
+
+INITIALISATION
+    c_obj                :=    OBJETS * { ko }
+    ; c_incompatibilites :=    {}
+    ; c_etat             :=    {}
+    ; c_type             :=    {}
+    ; c_pos              :=    {}
+    ; c_alarme           :=    FALSE
+
+
+OPERATIONS
+    addObjetImmobile ( oo ) =
+    BEGIN
+        c_obj ( oo ) := ok
+        ; c_etat ( oo ) := inactif
+        ; c_type ( oo ) := immobile
+    END ;
+
+
+
+    addObjetMobile ( oo , xx , yy ) =
+    BEGIN
+        c_obj ( oo ) := ok
+        ; c_etat ( oo ) := inactif
+        ; c_type ( oo ) := mobile
+        ; c_pos ( oo ) := { xx |-> yy }
+    END ;
+
+
+
+    activate ( oo ) =
+    BEGIN
+        c_etat ( oo ) := actif
+    END ;
+
+
+
+    deactivate ( oo ) =
+    BEGIN
+        c_etat ( oo ) := inactif
+    END ;
+
+
+
+    activateAlarm =
+    BEGIN
+        c_etat := ( c_etat |> { invalide } \/ c_etat |> { inactif } \/ c_etat ~ [ { actif } ] * { inactif } )
+        ; c_alarme := TRUE
+    END ;
+
+
+
+    rr <-- getActifObjects =
+    BEGIN
+        rr := c_etat ~ [ { actif } ]
+    END ;
+
+
+
+    rr <-- getInvalideObjects =
+    BEGIN
+        rr := c_etat ~ [ { invalide } ]
+    END
+
+ END

@@ -93,26 +93,38 @@ THEORY ListConstraintsX IS
 END
 &
 THEORY ListOperationsX IS
-  Internal_List_Operations(Machine(Superviseur))==(addObjetImmobile,addObjetMobile,activate);
-  List_Operations(Machine(Superviseur))==(addObjetImmobile,addObjetMobile,activate)
+  Internal_List_Operations(Machine(Superviseur))==(addObjetImmobile,addObjetMobile,activate,deactivate,activateAlarm,getActifObjects,getInvalideObjects);
+  List_Operations(Machine(Superviseur))==(addObjetImmobile,addObjetMobile,activate,deactivate,activateAlarm,getActifObjects,getInvalideObjects)
 END
 &
 THEORY ListInputX IS
   List_Input(Machine(Superviseur),addObjetImmobile)==(oo);
   List_Input(Machine(Superviseur),addObjetMobile)==(oo,xx,yy);
-  List_Input(Machine(Superviseur),activate)==(oo)
+  List_Input(Machine(Superviseur),activate)==(oo);
+  List_Input(Machine(Superviseur),deactivate)==(oo);
+  List_Input(Machine(Superviseur),activateAlarm)==(?);
+  List_Input(Machine(Superviseur),getActifObjects)==(?);
+  List_Input(Machine(Superviseur),getInvalideObjects)==(?)
 END
 &
 THEORY ListOutputX IS
   List_Output(Machine(Superviseur),addObjetImmobile)==(?);
   List_Output(Machine(Superviseur),addObjetMobile)==(?);
-  List_Output(Machine(Superviseur),activate)==(?)
+  List_Output(Machine(Superviseur),activate)==(?);
+  List_Output(Machine(Superviseur),deactivate)==(?);
+  List_Output(Machine(Superviseur),activateAlarm)==(?);
+  List_Output(Machine(Superviseur),getActifObjects)==(rr);
+  List_Output(Machine(Superviseur),getInvalideObjects)==(rr)
 END
 &
 THEORY ListHeaderX IS
   List_Header(Machine(Superviseur),addObjetImmobile)==(addObjetImmobile(oo));
   List_Header(Machine(Superviseur),addObjetMobile)==(addObjetMobile(oo,xx,yy));
-  List_Header(Machine(Superviseur),activate)==(activate(oo))
+  List_Header(Machine(Superviseur),activate)==(activate(oo));
+  List_Header(Machine(Superviseur),deactivate)==(deactivate(oo));
+  List_Header(Machine(Superviseur),activateAlarm)==(activateAlarm);
+  List_Header(Machine(Superviseur),getActifObjects)==(rr <-- getActifObjects);
+  List_Header(Machine(Superviseur),getInvalideObjects)==(rr <-- getInvalideObjects)
 END
 &
 THEORY ListOperationGuardX END
@@ -120,16 +132,28 @@ THEORY ListOperationGuardX END
 THEORY ListPreconditionX IS
   List_Precondition(Machine(Superviseur),addObjetImmobile)==(oo: OBJETS & oo/:obj);
   List_Precondition(Machine(Superviseur),addObjetMobile)==(oo: OBJETS & oo/:obj & xx: NAT & yy: NAT & pos~[{{xx|->yy}}] = {});
-  List_Precondition(Machine(Superviseur),activate)==(oo: obj & etat(oo)/=actif & incompatibilites[{oo}]/\etat~[{actif}] = {} & incompatibilites~[{oo}]/\etat~[{actif}] = {} & alarme = FALSE)
+  List_Precondition(Machine(Superviseur),activate)==(oo: obj & etat(oo)/=actif & incompatibilites[{oo}]/\etat~[{actif}] = {} & incompatibilites~[{oo}]/\etat~[{actif}] = {} & alarme = FALSE);
+  List_Precondition(Machine(Superviseur),deactivate)==(oo: obj & etat(oo) = actif);
+  List_Precondition(Machine(Superviseur),activateAlarm)==(alarme = FALSE);
+  List_Precondition(Machine(Superviseur),getActifObjects)==(btrue);
+  List_Precondition(Machine(Superviseur),getInvalideObjects)==(btrue)
 END
 &
 THEORY ListSubstitutionX IS
+  Expanded_List_Substitution(Machine(Superviseur),getInvalideObjects)==(btrue | rr:=etat~[{invalide}]);
+  Expanded_List_Substitution(Machine(Superviseur),getActifObjects)==(btrue | rr:=etat~[{actif}]);
+  Expanded_List_Substitution(Machine(Superviseur),activateAlarm)==(alarme = FALSE | etat,alarme:=etat|>{invalide}\/etat|>{inactif}\/etat~[{actif}]*{inactif},TRUE);
+  Expanded_List_Substitution(Machine(Superviseur),deactivate)==(oo: obj & etat(oo) = actif | etat:=etat<+{oo|->inactif});
   Expanded_List_Substitution(Machine(Superviseur),activate)==(oo: obj & etat(oo)/=actif & incompatibilites[{oo}]/\etat~[{actif}] = {} & incompatibilites~[{oo}]/\etat~[{actif}] = {} & alarme = FALSE | etat:=etat<+{oo|->actif});
   Expanded_List_Substitution(Machine(Superviseur),addObjetMobile)==(oo: OBJETS & oo/:obj & xx: NAT & yy: NAT & pos~[{{xx|->yy}}] = {} | obj,etat,type,pos:=obj\/{oo},etat\/{oo|->inactif},type\/{oo|->mobile},pos\/{oo|->{xx|->yy}});
   Expanded_List_Substitution(Machine(Superviseur),addObjetImmobile)==(oo: OBJETS & oo/:obj | obj,etat,type:=obj\/{oo},etat\/{oo|->inactif},type\/{oo|->immobile});
   List_Substitution(Machine(Superviseur),addObjetImmobile)==(obj:=obj\/{oo} || etat:=etat\/{oo|->inactif} || type:=type\/{oo|->immobile});
   List_Substitution(Machine(Superviseur),addObjetMobile)==(obj:=obj\/{oo} || etat:=etat\/{oo|->inactif} || type:=type\/{oo|->mobile} || pos:=pos\/{oo|->{xx|->yy}});
-  List_Substitution(Machine(Superviseur),activate)==(etat(oo):=actif)
+  List_Substitution(Machine(Superviseur),activate)==(etat(oo):=actif);
+  List_Substitution(Machine(Superviseur),deactivate)==(etat(oo):=inactif);
+  List_Substitution(Machine(Superviseur),activateAlarm)==(etat:=etat|>{invalide}\/etat|>{inactif}\/etat~[{actif}]*{inactif} || alarme:=TRUE);
+  List_Substitution(Machine(Superviseur),getActifObjects)==(rr:=etat~[{actif}]);
+  List_Substitution(Machine(Superviseur),getInvalideObjects)==(rr:=etat~[{invalide}])
 END
 &
 THEORY ListConstantsX IS
@@ -173,11 +197,15 @@ THEORY ListSeenInfoX END
 THEORY ListANYVarX IS
   List_ANY_Var(Machine(Superviseur),addObjetImmobile)==(?);
   List_ANY_Var(Machine(Superviseur),addObjetMobile)==(?);
-  List_ANY_Var(Machine(Superviseur),activate)==(?)
+  List_ANY_Var(Machine(Superviseur),activate)==(?);
+  List_ANY_Var(Machine(Superviseur),deactivate)==(?);
+  List_ANY_Var(Machine(Superviseur),activateAlarm)==(?);
+  List_ANY_Var(Machine(Superviseur),getActifObjects)==(?);
+  List_ANY_Var(Machine(Superviseur),getInvalideObjects)==(?)
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(Superviseur)) == (OBJETS,ETATS,TYPES,actif,inactif,invalide,mobile,immobile | ? | alarme,pos,type,etat,incompatibilites,obj | ? | addObjetImmobile,addObjetMobile,activate | ? | ? | ? | Superviseur);
+  List_Of_Ids(Machine(Superviseur)) == (OBJETS,ETATS,TYPES,actif,inactif,invalide,mobile,immobile | ? | alarme,pos,type,etat,incompatibilites,obj | ? | addObjetImmobile,addObjetMobile,activate,deactivate,activateAlarm,getActifObjects,getInvalideObjects | ? | ? | ? | Superviseur);
   List_Of_HiddenCst_Ids(Machine(Superviseur)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(Superviseur)) == (?);
   List_Of_VisibleVar_Ids(Machine(Superviseur)) == (? | ?);
@@ -197,7 +225,8 @@ THEORY VariablesEnvX IS
 END
 &
 THEORY OperationsEnvX IS
-  Operations(Machine(Superviseur)) == (Type(activate) == Cst(No_type,atype(OBJETS,?,?));Type(addObjetMobile) == Cst(No_type,atype(OBJETS,?,?)*btype(INTEGER,?,?)*btype(INTEGER,?,?));Type(addObjetImmobile) == Cst(No_type,atype(OBJETS,?,?)))
+  Operations(Machine(Superviseur)) == (Type(getInvalideObjects) == Cst(SetOf(atype(OBJETS,?,?)),No_type);Type(getActifObjects) == Cst(SetOf(atype(OBJETS,?,?)),No_type);Type(activateAlarm) == Cst(No_type,No_type);Type(deactivate) == Cst(No_type,atype(OBJETS,?,?));Type(activate) == Cst(No_type,atype(OBJETS,?,?));Type(addObjetMobile) == Cst(No_type,atype(OBJETS,?,?)*btype(INTEGER,?,?)*btype(INTEGER,?,?));Type(addObjetImmobile) == Cst(No_type,atype(OBJETS,?,?)));
+  Observers(Machine(Superviseur)) == (Type(getInvalideObjects) == Cst(SetOf(atype(OBJETS,?,?)),No_type);Type(getActifObjects) == Cst(SetOf(atype(OBJETS,?,?)),No_type))
 END
 &
 THEORY TCIntRdX IS

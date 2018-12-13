@@ -1,9 +1,20 @@
 ﻿THEORY User_Pass IS
+Operation(Initialisation) & ff(0) & pr;
+Operation(addObjetImmobile) & ff(0) & pr;
+Operation(addObjetImmobile) & ff(1) & pr;
+Operation(addObjetMobile) & ff(0) & pr;
+Operation(addObjetMobile) & ff(1) & pr;
+Operation(activate) & ff(0) & pr;
 Operation(activate) & ff(0) & pr & pp(rp.1);
+Operation(deactivate) & ff(0) & pr;
+Operation(activateAlarm) & ff(0) & pr;
+Operation(WellDefinedness_Precondition_activate) & ff(0) & pr;
+Operation(WellDefinedness_Precondition_deactivate) & ff(0) & pr;
 Operation(addObjetImmobile) & ff(0) & pr & pr & pr & pr;
 Operation(addObjetMobile) & ff(0) & pr & pr & pr & pr;
 Operation(addObjetImmobile) & ff(0) & pr & pr & pr & pr & pr;
 Operation(addObjetMobile) & ff(0) & pr & pr & pr & pr & pr;
+Operation(deactivate) & ff(0) & pr & pr & pr & pp(rp.1) & pr & pr & pr & pp(rp.1) & pr;
 Operation(addObjetImmobile) & ff(0) & pr & pr & pr & pr & pr & pr & pr & pr & pr & pr;
 Operation(addObjetMobile) & ff(0) & pr & pr & pr & pr & pr & pr & pr & pr & pr & pr & pr & pr & pr & pp(rp.1) & pr & pr & pr & pr
 END 
