@@ -1,0 +1,21 @@
+﻿THEORY User_Pass IS
+Operation(ValuesLemmas) & ff(0) & pr;
+Operation(Initialisation) & ff(0) & pr;
+Operation(addObjetImmobile) & ff(0) & pr;
+Operation(addObjetMobile) & ff(0) & pr;
+Operation(activate) & ff(0) & pr;
+Operation(deactivate) & ff(0) & pr;
+Operation(getActifObjects) & ff(0) & pr;
+Operation(getInvalideObjects) & ff(0) & pr;
+Operation(ValuesLemmas) & ff(0) & ch & ss & pr;
+Operation(addObjetImmobile) & ff(3) & pr & pr & pp(rp.1);
+Operation(addObjetMobile) & ff(1) & pr & pr & pr;
+Operation(Initialisation) & ff(2) & ch & ss & pr & ch & ss;
+Operation(addObjetImmobile) & ff(0) & pr & pr & pr & pr & pr & pr & pr & pp(rp.1) & pp(rp.1);
+Operation(addObjetMobile) & ff(0) & pr & pr & pr & pr & pr & pr & pr;
+Operation(addObjetMobile) & ff(2) & pr & pr & pr;
+Operation(activateAlarm) & ff(3) & pr & ch & ss & pr;
+Operation(addObjetImmobile) & ff(3) & pr & ch & pr & pr & pr & ch & ss & ch & ch & ss & ch & pr;
+Operation(activate) & ff(3) & pr & pr & pr & pr & pr & pr & pp(rp.1);
+Operation(deactivate) & ff(3) & pr & pr & pr & pr & pr & pr & pr & pr & pr & pp(rp.1)
+END 

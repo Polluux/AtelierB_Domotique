@@ -1,18 +1,18 @@
 ﻿THEORY BalanceX IS
-  Superviseur_i,39,0,0,17,0,0,0;
-  Initialisation,8,0,0,4,0,0,0;
+  Superviseur_i,35,0,0,17,0,0,0;
+  Initialisation,7,0,0,5,0,0,0;
   ValuesLemmas,3,0,0,1,0,0,0;
-  WellDefinednessInvariant,1,0,0,0,0,0,0;
   activate,2,0,0,1,0,0,0;
   activateAlarm,2,0,0,0,0,0,0;
-  addObjetImmobile,9,0,0,5,0,0,0;
-  addObjetMobile,10,0,0,5,0,0,0;
-  deactivate,2,0,0,1,0,0,0;
+  addObjetImmobile,8,0,0,3,0,0,0;
+  addObjetMobile,9,0,0,6,0,0,0;
+  deactivate,2,0,0,0,0,0,0;
   getActifObjects,1,0,0,0,0,0,0;
-  getInvalideObjects,1,0,0,0,0,0,0
+  getInvalideObjects,1,0,0,1,0,0,0
 END
 &
 THEORY ProofState IS
+  Proved(0);
   Unproved;
   Unproved;
   Unproved;
@@ -23,31 +23,26 @@ THEORY ProofState IS
   Unproved;
   Proved(0);
   Unproved;
-  Unproved;
-  Unproved;
   Proved(0);
   Unproved;
   Proved(0);
-  Unproved;
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Unproved;
-  Unproved;
-  Proved(0);
-  Unproved;
-  Proved(0);
-  Unproved;
   Proved(0);
   Proved(0);
   Proved(0);
   Unproved;
   Unproved;
   Unproved;
+  Unproved;
+  Unproved;
+  Proved(0);
+  Proved(0);
   Proved(0);
   Proved(0);
   Proved(0);
   Unproved;
+  Unproved;
+  Proved(0);
+  Proved(0);
   Proved(0);
   Unproved;
   Unproved;
@@ -55,15 +50,10 @@ THEORY ProofState IS
 END
 &
 THEORY MethodList IS
-  ?;
-  ?;
-  ?;
-  ?;
-  ?;
-  ?;
   pr;
   ?;
-  pr;
+  ?;
+  ?;
   ?;
   ?;
   ?;
@@ -72,17 +62,13 @@ THEORY MethodList IS
   pr;
   ?;
   pr;
-  pr;
-  pr;
-  ?;
-  ?;
-  pr;
-  ?;
-  pr;
   ?;
   pr;
   pr;
   pr;
+  pr;
+  ?;
+  ?;
   ?;
   ?;
   ?;
@@ -91,12 +77,18 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
+  ?;
+  ?;
   pr;
   pr;
+  pr;
+  ?;
+  ?;
   pr
 END
 &
 THEORY PassList IS
+  Force(0),?;
   Force(0),(?;0;1);
   Force(0),(?;0;1);
   Force(0),(?;0;1);
@@ -107,31 +99,26 @@ THEORY PassList IS
   Force(0),(?;0;1);
   Force(0),?;
   Force(0),(?;0;1);
-  Force(0),(?;0;1);
-  Force(0),(?;0;1);
   Force(0),?;
   Force(0),(?;0;1);
   Force(0),?;
-  Force(0),(?;0;1);
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),(?;0;1);
-  Force(0),(?;0;1);
-  Force(0),?;
-  Force(0),(?;0;1);
-  Force(0),?;
-  Force(0),(?;0;1);
   Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),(?;0;1);
   Force(0),(?;0;1);
   Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?;
   Force(0),?;
   Force(0),(?;0;1);
   Force(0),(?;0;1);

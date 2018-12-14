@@ -141,8 +141,8 @@ THEORY ListPreconditionX IS
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Implementation(Superviseur_i),getInvalideObjects)==(btrue | rr:=c_etat~[{invalide}]);
-  Expanded_List_Substitution(Implementation(Superviseur_i),getActifObjects)==(btrue | rr:=c_etat~[{actif}]);
+  Expanded_List_Substitution(Implementation(Superviseur_i),getInvalideObjects)==(btrue | rr:=(c_obj~[{ok}]<|c_etat)~[{invalide}]);
+  Expanded_List_Substitution(Implementation(Superviseur_i),getActifObjects)==(btrue | rr:=(c_obj~[{ok}]<|c_etat)~[{actif}]);
   Expanded_List_Substitution(Implementation(Superviseur_i),activateAlarm)==(alarme = FALSE & alarme = FALSE | c_etat:=c_etat|>{invalide}\/c_etat|>{inactif}\/c_etat~[{actif}]*{inactif};c_alarme:=TRUE);
   Expanded_List_Substitution(Implementation(Superviseur_i),deactivate)==(oo: obj & etat(oo) = actif & oo: obj & etat(oo) = actif & oo: dom(c_etat) | c_etat:=c_etat<+{oo|->inactif});
   Expanded_List_Substitution(Implementation(Superviseur_i),activate)==(oo: obj & etat(oo)/=actif & incompatibilites[{oo}]/\etat~[{actif}] = {} & incompatibilites~[{oo}]/\etat~[{actif}] = {} & alarme = FALSE & oo: obj & etat(oo)/=actif & incompatibilites[{oo}]/\etat~[{actif}] = {} & incompatibilites~[{oo}]/\etat~[{actif}] = {} & alarme = FALSE & oo: dom(c_etat) | c_etat:=c_etat<+{oo|->actif});
@@ -153,8 +153,8 @@ THEORY ListSubstitutionX IS
   List_Substitution(Implementation(Superviseur_i),activate)==(c_etat(oo):=actif);
   List_Substitution(Implementation(Superviseur_i),deactivate)==(c_etat(oo):=inactif);
   List_Substitution(Implementation(Superviseur_i),activateAlarm)==(c_etat:=c_etat|>{invalide}\/c_etat|>{inactif}\/c_etat~[{actif}]*{inactif};c_alarme:=TRUE);
-  List_Substitution(Implementation(Superviseur_i),getActifObjects)==(rr:=c_etat~[{actif}]);
-  List_Substitution(Implementation(Superviseur_i),getInvalideObjects)==(rr:=c_etat~[{invalide}])
+  List_Substitution(Implementation(Superviseur_i),getActifObjects)==(rr:=(c_obj~[{ok}]<|c_etat)~[{actif}]);
+  List_Substitution(Implementation(Superviseur_i),getInvalideObjects)==(rr:=(c_obj~[{ok}]<|c_etat)~[{invalide}])
 END
 &
 THEORY ListConstantsX IS

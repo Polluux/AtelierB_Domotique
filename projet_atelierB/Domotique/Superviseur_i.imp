@@ -91,14 +91,14 @@ OPERATIONS
     
     rr<--getActifObjects=
     BEGIN
-        rr := c_etat~[{actif}]
+        rr := (c_obj~[{ok}] <| c_etat)~[{actif}]
     END;
 
 
     
     rr<--getInvalideObjects=
     BEGIN
-        rr := c_etat~[{invalide}]
+        rr := (c_obj~[{ok}] <| c_etat)~[{invalide}]
     END
 
  END

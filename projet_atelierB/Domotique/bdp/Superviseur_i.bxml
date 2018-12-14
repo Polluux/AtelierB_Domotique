@@ -390,7 +390,17 @@
 <Values>
 <Binary_Exp op='[' typref='3603043417'>
 <Unary_Exp op='~' typref='4107876515'>
+<Binary_Exp op='&lt;|' typref='69837091'>
+<Binary_Exp op='[' typref='3603043417'>
+<Unary_Exp op='~' typref='3392313466'>
+<Id value='c_obj' typref='1336458170'/>
+</Unary_Exp>
+<Nary_Exp op='{' typref='3173527797'>
+<Id value='ok' typref='2100031460'/>
+</Nary_Exp>
+</Binary_Exp>
 <Id value='c_etat' typref='69837091'/>
+</Binary_Exp>
 </Unary_Exp>
 <Nary_Exp op='{' typref='479950508'>
 <Id value='actif' typref='1469311511'/>
@@ -412,7 +422,17 @@
 <Values>
 <Binary_Exp op='[' typref='3603043417'>
 <Unary_Exp op='~' typref='4107876515'>
+<Binary_Exp op='&lt;|' typref='69837091'>
+<Binary_Exp op='[' typref='3603043417'>
+<Unary_Exp op='~' typref='3392313466'>
+<Id value='c_obj' typref='1336458170'/>
+</Unary_Exp>
+<Nary_Exp op='{' typref='3173527797'>
+<Id value='ok' typref='2100031460'/>
+</Nary_Exp>
+</Binary_Exp>
 <Id value='c_etat' typref='69837091'/>
+</Binary_Exp>
 </Unary_Exp>
 <Nary_Exp op='{' typref='479950508'>
 <Id value='invalide' typref='1469311511'/>

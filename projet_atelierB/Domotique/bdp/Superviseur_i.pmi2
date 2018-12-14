@@ -1,9 +1,49 @@
 ﻿THEORY BalanceX IS
-  Superviseur_i,3,0,0,1,0,0,0;
-  ValuesLemmas,3,0,0,1,0,0,0
+  Superviseur_i,35,0,0,15,0,0,0;
+  Initialisation,7,0,0,5,0,0,0;
+  ValuesLemmas,3,0,0,1,0,0,0;
+  activate,2,0,0,0,0,0,0;
+  activateAlarm,2,0,0,0,0,0,0;
+  addObjetImmobile,8,0,0,3,0,0,0;
+  addObjetMobile,9,0,0,4,0,0,0;
+  deactivate,2,0,0,1,0,0,0;
+  getActifObjects,1,0,0,1,0,0,0;
+  getInvalideObjects,1,0,0,0,0,0,0
 END
 &
 THEORY ProofState IS
+  Unproved;
+  Proved(0);
+  Unproved;
+  Unproved;
+  Unproved;
+  Proved(0);
+  Unproved;
+  Unproved;
+  Unproved;
+  Proved(0);
+  Unproved;
+  Proved(0);
+  Unproved;
+  Unproved;
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Unproved;
+  Unproved;
+  Unproved;
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Proved(0);
   Unproved;
   Unproved;
   Proved(0)
@@ -12,10 +52,74 @@ END
 THEORY MethodList IS
   ?;
   pr;
+  ?;
+  ?;
+  ?;
+  pr;
+  ?;
+  ?;
+  ?;
+  pr;
+  ?;
+  pr;
+  ?;
+  pr;
+  pr;
+  pr;
+  pr;
+  ?;
+  ?;
+  ?;
+  ?;
+  ?;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  ?;
+  ?;
+  pr;
+  pr;
+  pr;
+  ?;
+  ?;
   pr
 END
 &
 THEORY PassList IS
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
   Force(0),(?;0;1);
   Force(0),(?;0;1);
   Force(0),?
